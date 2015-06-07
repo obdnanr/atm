@@ -1,6 +1,10 @@
+######################################## NOT FINISHED  ##########################################
+# I need to write print transaction
+# Need to create a database with username, pin, transactions(all changes to balance), current balance
+# Add the transactions to the menu
 import os,datetime
-# Create accounts
 date = datetime.date.today()
+# Create accounts
 class Account(object):
 	def __init__(self, initial):
 		self.balance = initial
@@ -26,10 +30,6 @@ class Account(object):
 		menu()		
 		return self.balance
 	
-	def password(self):
-		if password == password:
-			print 'it worked'
-			return True
 #menu function	
 def menu():
 	menu = '\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit\n'
@@ -83,6 +83,7 @@ def user():
 	if username == jon.username:
 		login()
 	else:
+		print 'Wrong user name, please try again.'		
 		user()
 #login function checks the pin and proceeds if it's correct
 def login():
