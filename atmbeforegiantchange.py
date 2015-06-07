@@ -62,11 +62,11 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 		amt = float(raw_input("""\n\n\n\n\nPlease enter your the amount you wish to deposit.\n"""))
 		os.system('clear')
 		jon.deposit(amt)
-		
 
+#exit the atm
 	elif sel == 5:
 		os.system('clear')		
-		login()#call the login function you about to write
+		user()#call the login function you about to write
 	else:
 		print('Wrong selection please login')
 		login()
@@ -77,7 +77,12 @@ jon=Account(110.00)
 jon.pin = int(1234)
 jon.username = 'JonS'
 
-#username = raw_input('Enter your user name\n')
+def user():
+	username = raw_input('Enter your user name\n')
+	if username == jon.username:
+		login()
+	else:
+		user()
 #login function checks the pin and proceeds if it's correct
 def login():
 	pin = int(raw_input('Enter your pin\n'))
@@ -88,6 +93,6 @@ def login():
 		print('Wrong pin, the police are on the way.')
 		login()
 
-login()
+user()
 
 
