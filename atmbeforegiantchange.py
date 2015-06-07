@@ -32,7 +32,7 @@ class Account(object):
 			return True
 #menu function	
 def menu():
-	menu = """\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit\n"""
+	menu = '\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit\n'
 	sel = int(raw_input(menu))
 #Fast cash calls the class Account and uses the withdraw function to withdraw $40 quickly.
 	if sel == 1:
