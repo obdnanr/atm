@@ -6,6 +6,8 @@ class Account(object):
 	
 	def deposit(self, amt):
 		self.balance = self.balance + amt
+		print '\n\n\n\n\nYour balance is now $', self.balance
+		menu()
 	
 #Withdraw money if the balance is greater than 0
 	def withdraw(self,amt):
@@ -29,10 +31,9 @@ class Account(object):
 			return True
 #menu function	
 def menu():
-	menu = """\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit"""
+	menu = """\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit\n"""
 	sel = int(raw_input(menu))
-#Fast cash calls the class Account and uses the withdraw function
-#to withdraw $40 quickly.
+#Fast cash calls the class Account and uses the withdraw function to withdraw $40 quickly.
 	if sel == 1:
 		os.system('clear')
 		jon.withdraw(40.0)
@@ -42,8 +43,7 @@ def menu():
 		os.system('clear')
 		jon.getbalance()
 
-#This will ask the user for how much they want to withdraw and
-#convert it to a float
+#This will ask the user for how much they want to withdraw and convert it to a float
 	elif sel == 3:
 		os.system('clear')	
 		amt = float(raw_input("""\n\n\n\n\n
@@ -58,7 +58,11 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 
 #This is for depositing
 	elif sel == 4:
-		pass
+		os.system('clear')
+		amt = float(raw_input("""\n\n\n\n\nPlease enter your the amount you wish to deposit.\n"""))
+		os.system('clear')
+		jon.deposit(amt)
+		
 
 	elif sel == 5:
 		os.system('clear')		
@@ -71,6 +75,7 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 
 jon=Account(110.00)
 jon.pin = int(1234)
+jon.username = 'JonS'
 
 #username = raw_input('Enter your user name\n')
 #login function checks the pin and proceeds if it's correct
