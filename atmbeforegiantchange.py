@@ -55,7 +55,7 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 			os.system('clear')
 			jon.withdraw(amt)
 		else:
-			pass
+			user()
 
 #This is for depositing
 	elif sel == 4:
@@ -70,7 +70,7 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 		user()#call the login function you about to write
 	else:
 		print('Wrong selection please login')
-		login()
+		menu()
 
 #end of menu function	
 
@@ -98,3 +98,127 @@ def login():
 user()
 
 
+############## OUT PUT ###################
+"""
+Enter your user name
+JonS
+Enter your pin
+1234
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+
+
+
+1
+Your balance is now $ 70.0 
+2015-06-07
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+2
+
+
+
+
+Your balance is $ 70.0 
+2015-06-07
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+3
+
+
+
+
+
+Please enter your the amount you wish to withdraw in $20 increments.
+120
+Are you sure you want to withdraw $ 120?
+1) Yes
+2) No
+Insufficient funds
+Enter your pin
+1234
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+
+3
+
+
+
+
+
+Please enter your the amount you wish to withdraw in $20 increments.
+
+20
+Are you sure you want to withdraw $ 20?
+1) Yes
+2) No
+
+Your balance is now $ 50.0 
+2015-06-07
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+4
+
+
+
+
+
+
+Please enter your the amount you wish to deposit.
+500
+Your balance is now $ 550.0 
+2015-06-07
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+5
+Enter your user name
+
+"""
