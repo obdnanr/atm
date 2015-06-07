@@ -1,19 +1,20 @@
-import os
+import os,datetime
 # Create accounts
+date = datetime.date.today()
 class Account(object):
 	def __init__(self, initial):
 		self.balance = initial
 	
 	def deposit(self, amt):
 		self.balance = self.balance + amt
-		print '\n\n\n\n\nYour balance is now $', self.balance
+		print '\n\n\n\n\nYour balance is now $', self.balance, '\n', date
 		menu()
 	
 #Withdraw money if the balance is greater than 0
 	def withdraw(self,amt):
 		if (self.balance - amt) > 0.0:
 			self.balance = self.balance - amt
-			print '\n\n\n\n\nYour balance is now $', self.balance
+			print '\n\n\n\n\nYour balance is now $', self.balance, '\n', date
 			menu()
 		else:
 			print 'Insufficient funds'
@@ -21,7 +22,7 @@ class Account(object):
 
 #Get the account balance and print it to the screen
 	def getbalance(self):
-		print '\n\n\n\n\nYour balance is $', self.balance
+		print '\n\n\n\n\nYour balance is $', self.balance, '\n', date
 		menu()		
 		return self.balance
 	
