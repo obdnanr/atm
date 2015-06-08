@@ -68,7 +68,7 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 	elif sel == 5:
 		os.system('clear')		
 		user()#call the login function you about to write
-	else:
+	else:#this else statement doesn't work because it can't call menu from inside itself??????
 		print('Wrong selection please login')
 		menu()
 
