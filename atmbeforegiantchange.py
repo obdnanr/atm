@@ -2,6 +2,7 @@
 # I need to write print transaction
 # Need to create a database with username, pin, transactions(all changes to balance), current balance
 # Add the transactions to the menu
+# The menu needs to be in Python IDLE, shit....
 import os,datetime
 date = datetime.date.today()
 # Create accounts
