@@ -30,9 +30,10 @@ class Account(object):
 		menu()		
 		return self.balance
 	
-#menu function	
+#menu function ##########	Inputing strings breaks the menu ##### fix it
 def menu():
 	menu = '\n\n\n\n\n1) Fast Cash $40\t\t3) Withdraw\n\n2) Account Balance\t\t4) Deposit\n\n5) Exit\n'
+#I'm going to try to leave sel as raw input and convert to an int on the next line
 	sel = int(raw_input(menu))
 #Fast cash calls the class Account and uses the withdraw function to withdraw $40 quickly.
 	if sel == 1:
@@ -67,10 +68,10 @@ Please enter your the amount you wish to withdraw in $20 increments.\n"""))
 #exit the atm
 	elif sel == 5:
 		os.system('clear')		
-		user()#call the login function you about to write
-	else:#this else statement doesn't work because it can't call menu from inside itself??????
+		user()
+	else:
 		print('Wrong selection please login')
-		menu()
+		user()
 
 #end of menu function	
 
@@ -93,7 +94,7 @@ def login():
 	else:
 		os.system('clear')
 		print('Wrong pin, the police are on the way.')
-		login()
+		user()
 
 user()
 
@@ -219,6 +220,25 @@ Your balance is now $ 550.0
 
 5) Exit
 5
+Enter your user name
+JonS
+Enter your Pin
+1
+Wrong pin, the police are on the way.
+Enter your pin
+1234
+
+
+
+
+
+1) Fast Cash $40		3) Withdraw
+
+2) Account Balance		4) Deposit
+
+5) Exit
+88
+Wrong selection please login
 Enter your user name
 
 """
